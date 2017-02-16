@@ -1,0 +1,202 @@
+% arara: latex
+% arara: dvips
+% arara: ps2pdf
+
+\newcommand{\CLASSINPUTinnersidemargin}{18mm}
+\newcommand{\CLASSINPUToutersidemargin}{12mm}
+\newcommand{\CLASSINPUTtoptextmargin}{20mm}
+\newcommand{\CLASSINPUTbottomtextmargin}{25mm}
+\documentclass[10pt,conference,a4paper]{IEEEtran}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%% Tildes y demás caracteres en castellano...
+%\usepackage[latin1]{inputenc}
+% o bien
+\usepackage[utf8]{inputenc}
+
+
+%%% Fuente Times...
+\usepackage{times}
+
+
+%%% Figuras en formato .png, .ps, pdf o eps
+\usepackage{graphicx}
+\usepackage{subfigure}
+\DeclareGraphicsExtensions{.png,.eps,.ps,.pdf}
+
+%%% Formato y tipografía de URL, direcciones de correo...
+\usepackage{url}
+%\usepackage{hyperref}
+
+%%% Sección para definir explícitamente la separación de sílabas al final de una línea:
+\hyphenation{si-guien-do}
+
+\begin{document}
+
+
+
+%%% Título
+\title{Ejemplo de trabajo para JNIC. Siga las instrucciones proporcionadas, 
+indicando el tipo de trabajo de que se trata}
+
+
+%%% Autores
+\author{\IEEEauthorblockN{Nombre y apellidos primer autor}
+\IEEEauthorblockA{Afiliación  primer autor\\
+Dirección primer autor\\
+Email primer autor}
+\and
+\IEEEauthorblockN{Nombre y apellidos segundo autor}
+\IEEEauthorblockA{Afiliación segundo autor\\
+Dirección segundo autor\\
+Email segundo autor}
+\and
+\IEEEauthorblockN{Nombre y apellidos tercer autor}
+\IEEEauthorblockA{Afiliación tercer autor\\
+Dirección tercer autor\\
+Email tercer autor}}
+
+
+\maketitle
+
+
+%%% Abstract
+\begin{abstract}
+Las bases de datos orientadas a grafos son una tecnología emergente y con un uso muy valioso en la seguridad informática, sobretodo en a detección de nuevos vectores de ataque a través de la correlación de diversas fuentes de información. Sin embargo, no se está poniendo la demasiada atención en términos de seguridad. En este articulo se ha analizado la seguridad que implementan dos de las más conocidas y usadas, Neo4j y OrientDB y el impacto que tienen actualmente. Se ha realizado una herramienta que automatice el proceso de descubrimiento y análisis de estas bases de datos, con ella se pueden realizar auditorias de manera rápida.\\
+\end{abstract}
+
+
+%%% Palabras clave
+\begin{keywords}
+Jornadas, Ciberseguridad
+\end{keywords}
+
+
+%%% Tipo de contribución: seleccione lo que proceda, eliminando el resto del texto
+{\bf Tipo de contribución:}  {\it Investigación original (límite 8 páginas)
+
+%%% Consejos generales 
+\section{Introducción}
+
+Los grafos proporcionan nuevas características a la hora de almacenar los datos que permiten la explotación y trazabilidad y con ello lograr nuevos resultados en el análisis de la información.\\
+
+
+%%% Consejos generales de formato y estilo
+\section{Estado del arte}
+
+Utilice tipografía {\it Times New Roman}, haciendo uso de un tamaño para el cuerpo del texto de 10 puntos 
+y de 24 puntos para el título del documento. Utilice el formato DIN-A4 (21 x 29,7 cm), ajuste los márgenes 
+superior e inferior a 2 y 2,5 cm respectivamente, el margen izquierdo a 1,8 cm y el derecho a 1,2 cm. El 
+artículo deberá ir a dos columnas con un espaciado entre columnas de 0,42 cm. Justifique las columnas 
+tanto a izquierda como a derecha.
+
+Los párrafos deberán ser escritos a espacio simple. Revise la separación de palabras y ajústela en la sección 
+\emph{hyphenation} en el preámbulo del documento. No olvide definir cada acrónimo la primera vez que aparezca 
+en el texto.
+
+
+%%% Consejos acerca de figuras y tablas
+\subsection{Figuras y tablas}
+
+El tamaño para los títulos de las tablas, figuras y notas al pie de página es de 8 puntos. Todas las figuras 
+y tablas deben aparecer centradas en la columna (las figuras y tablas de gran tamaño podrán extenderse sobre 
+ambas columnas). Evite colocar las figuras y tablas en medio de las columnas, siendo preferible su ubicación 
+en la parte superior o inferior de la página.
+
+La descripción de las figuras  deberá aparecer debajo de las mismas, centrada, numerándose con cifras arábigas. 
+Use la abreviatura {\it Fig. n} tanto para etiquetar una figura o gráfico como para referirse a ella.
+
+ La descripción de las tablas deberá aparecer encima de las mismas, numerándose con cifras romanas y con el 
+ texto en versalitas. La etiqueta de la tabla ({\it Tabla m}) debe escribirse en texto normal y encontrarse 
+ sola en una línea. Use {\it Tabla m} para referirse a una tabla.
+
+Los pies de las figuras y de las tablas deben seguir el formato mostrado para la Fig. \ref{fig:logoURJC} 
+y  la Tabla \ref{tab:ejtabla}. Si es posible, utilice un formato vectorial (como EPS o PDF) para representar 
+diagramas. Los formatos de tipo {\em raster} (como PNG o JPG) suelen generar ficheros muy grandes y pueden 
+perder calidad al ampliarlos.
+
+\begin{figure}[t]
+\centerline{
+\includegraphics[width=3cm]{logo-URJC.eps}
+}
+\caption{Ejemplo de figura.}
+\label{fig:logoURJC}
+\end{figure}
+
+\begin{table}[b]
+\centering
+\caption{Ejemplo de tabla: temperaturas y precipitaciones anuales en Granada en los últimos años.}
+\label{tab:ejtabla}
+\begin{tabular}{c c c c c}
+\hline
+\hline
+ Año & T. media & T. máxima     &     T. mínima       & Prep. total  \\ 
+        &    (ºC)     &  media  (ºC)   &      media  (ºC)   &      (mm)     \\
+\hline
+ 2014 & $16,1$  & $25,3$ & $8,3$ & $384,29$ \\
+ 2013 & $15,3$  & $23,7$ & $8,0$ & $492,75$ \\
+ 2012 & $15,3$  & $23,7$ & $7,6$ & $407,14$ \\
+ 2011 & $16,3$  & $24,5$ & $9,2$ & $368,82$ \\
+ 2010 & $ 15,1$ & $22,1$ & $8,0$ & $565,12$ \\
+\hline
+\hline
+\end{tabular}
+\end{table}
+
+
+%%% Consejos acerca de ecuaciones
+\subsection{Ecuaciones}
+
+Las ecuaciones deben estar centradas y situadas en líneas distintas. Cada ecuación beberá numerarse:
+
+\begin{equation}
+E = mc^2
+\label{eq:emc2}
+\end{equation}
+
+Para referenciar una ecuación, utilice {\it Ec. (\ref{eq:emc2})}.
+
+
+%%% Consejos acerca de numeración
+\subsection{Numeración, pies y encabezados de página}
+
+No aplique ningún elemento de numeración, pie o encabezado de página. Estos elementos se añaadirán 
+en el proceso final de confección de las actas. Por favor, deje la numeración tal como está en el 
+documento modelo.
+
+
+%%% Consejos acerca de las referencias
+\subsection{Referencias}
+
+Las referencias serán numeradas siguiendo el orden de aparición en el texto \cite{JNIC2016}. El 
+formato de las referencias bibliográficas será el estándar de IEEE. Se muestra un ejemplo en el 
+apartado correspondiente.
+
+
+%%% Consejos acerca de la conclusiones
+\section{Conclusiones}
+
+El seguimiento de las normas indicadas permitirá que su trabajo resulte visualmente atractivo y 
+uniforme con el resto. 
+
+Si bien se recomienda el uso de \LaTeX, también puede hacerse uso de la plantilla en formato Word 
+dispuesta en la web oficial de las jornadas (\url{http://2017.jnic.es/}).
+
+
+%%% Consejos acerca de la conclusiones
+\section*{Agradecimientos}
+
+En caso de aparecer, los agradecimientos deberán ubicarse al final del trabajo, justo antes de las 
+referencias, en una sección sin numerar.
+
+
+%%% inclusión de referncias
+\bibliographystyle{IEEEtran}
+
+\begin{thebibliography}{99}
+\bibitem{JNIC2016}
+Nombre autores: "Título del trabajo", en {\it nombre revista/conferencia}, vol. x, n. y, pp. aa-bb, año.
+\end{thebibliography}
+
+\end{document}
